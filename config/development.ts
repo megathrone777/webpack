@@ -2,6 +2,7 @@ import EslintWebpackPlugin from "eslint-webpack-plugin";
 import { Configuration, WatchIgnorePlugin } from "webpack";
 import { cwd } from "process";
 import { resolve } from "path";
+import "webpack-dev-server";
 
 import { options } from "./options";
 
@@ -15,12 +16,6 @@ const development: Configuration = {
     hot: true,
     host: "local-ip",
     open: true,
-    // proxy: {
-    //   "/api": {
-    //     target: "http://localhost:65004",
-    //     pathRewrite: { "^/api": "" },
-    //   },
-    // },
     liveReload: false,
     port: 1337,
     static: {
