@@ -1,7 +1,5 @@
 import styled, {
   DefaultTheme,
-  FlattenInterpolation,
-  ThemeProps,
   ThemeProvider,
   createGlobalStyle,
   css,
@@ -15,7 +13,7 @@ const theme: DefaultTheme = {
   colors,
   devices,
   fonts,
-  rem: (px: number): string => {
+  rem: (px) => {
     const baseFontSize = fonts.initialFontSize;
 
     return `${px / baseFontSize}rem`;
@@ -31,5 +29,3 @@ export {
   styled,
   theme,
 };
-
-export type { DefaultTheme, FlattenInterpolation, ThemeProps };

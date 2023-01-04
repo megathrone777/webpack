@@ -9,7 +9,10 @@ import { options } from "./options";
 const publicDir: string = resolve(cwd(), "public");
 const development: Configuration = {
   ...options,
-  devtool: "eval-cheap-module-source-map",
+  cache: {
+    type: "filesystem",
+  },
+  devtool: "inline-source-map",
   devServer: {
     compress: true,
     historyApiFallback: true,
@@ -46,9 +49,6 @@ const development: Configuration = {
       paths: [/\.js$/, /\.d\.[cm]ts$/],
     }),
   ],
-  watchOptions: {
-    poll: true,
-  },
 };
 
 export default development;

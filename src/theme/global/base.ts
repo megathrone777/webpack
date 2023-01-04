@@ -1,40 +1,38 @@
 import { css } from "~/theme";
 
-const base = css`
-  * {
-    box-sizing: border-box;
-  }
+const base = css(({ theme: { fonts } }) => ({
+  "*": {
+    boxSizing: "border-box",
+  },
 
-  html,
-  body,
-  #root {
-    height: 100%;
-  }
+  "html, body, #root": {
+    height: "100%",
+  },
 
-  html {
-    font-size: ${({ theme: { fonts } }): number => fonts.initialFontSize}px;
-  }
+  html: {
+    fontSize: `${fonts.initialFontSize}px`,
+  },
 
-  body {
-    -webkit-font-smoothing: antialiased;
-    font-family: "JetBrainsMono";
-    margin: 0;
-  }
+  body: {
+    WebkitFontSmoothing: "antialiased",
+    fontFamily: "JetBrainsMono",
+    margin: 0,
+  },
 
-  svg {
-    height: 100%;
-    width: 100%;
-  }
+  svg: {
+    height: "100%",
+    width: "100%",
+  },
 
-  img {
-    max-width: 100%;
-    vertical-align: middle;
-  }
+  img: {
+    maxWidth: "100%",
+    verticalAlign: "middle",
+  },
 
-  button {
-    background-color: transparent;
-    cursor: pointer;
-  }
-`;
+  button: {
+    backgroundColor: "transparent",
+    cursor: "pointer",
+  },
+}));
 
 export { base };

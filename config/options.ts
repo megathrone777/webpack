@@ -7,7 +7,6 @@ import { resolve } from "path";
 
 const rootDir: string = cwd();
 const options: Configuration = {
-  cache: true,
   context: rootDir,
   entry: "./src/index.tsx",
   module: {

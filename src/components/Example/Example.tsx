@@ -16,6 +16,7 @@ const Example: React.FC = () => {
       <p>Example component</p>
       <p>Example component</p>
       <p>Example component</p>
+      <button type="button">Button</button>
     </Await>
   );
 };

@@ -1,3 +1,3 @@
 import { styled } from "~/theme";
 
-export const StyledContent = styled.main``;
+export const StyledContent = styled("main")({});
