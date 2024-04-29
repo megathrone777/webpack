@@ -10,7 +10,7 @@ const publicDir: string = resolve(cwd(), "public");
 const development: Configuration = {
   ...options,
   cache: {
-    type: "filesystem",
+    type: "memory",
   },
   devtool: "inline-source-map",
   devServer: {
@@ -19,7 +19,7 @@ const development: Configuration = {
     hot: true,
     host: "local-ip",
     open: true,
-    liveReload: false,
+    liveReload: true,
     port: 1337,
     static: {
       directory: publicDir,
